@@ -45,25 +45,23 @@ To develop a cloud-based Security Operations Center (SOC) using Azure Virtual Ma
 
 *Ref 3: Custom Detection Rule Setup Screenshot 2/2*
 
-### 4. Real-Time Alerts and Incident Generation
-[Insert Screenshot]
+### 4. Real-Time Alerts and Analytics
 - Demonstrated real-time incident generation in Microsoft Sentinel by attempting RDP logins. The successful attempts were flagged and alerted by the custom detection rules set up in the previous step.
 - Incidents were generated for both successful logins via RDP, simulating a real-world security scenario (i.e. brute force attack).
 <img src="Images/4.png">
 
-*Ref 4: Incident Generation Screenshot*
+*Ref 4: Microsoft Sentinel Analytics Screenshot*
 
 ### 5. Log Analytics Workspace Configuration
-[Insert Screenshot]
 - Linked the Azure Virtual Machine to the Log Analytics Workspace to centralize data collection.
 - Optimized data ingestion and monitoring workflows, ensuring that security events from the VM were available for analysis in real-time.
 <img src="Images/5a.png">
 
-*Ref 5: Log Analytics Workspace Configuration Screenshot*
+*Ref 5:  Microsoft Sentinel Incidents Screenshot*
 
 <img src="Images/5b.png">
 
-*Ref 5: Log Analytics Workspace Configuration Screenshot*
+*Ref 5: Incident Details Screenshot*
 
 ### Future Enhancements
 - Integrate threat intelligence indicators through API calls for more comprehensive security monitoring.
