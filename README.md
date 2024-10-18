@@ -21,7 +21,7 @@ To develop a cloud-based Security Operations Center (SOC) using Azure Virtual Ma
 ## Steps
 ### 1. Set up Azure Virtual Machine
 [Insert Screenshot]
-<img src="images/1.png">
+<img src="Images/1.png">
 - Created a Windows-based Virtual Machine in Azure, using the free trial credits for deployment.
 - Exposed RDP (Remote Desktop Protocol) access to simulate potential attacks and generate security events for monitoring.
 
