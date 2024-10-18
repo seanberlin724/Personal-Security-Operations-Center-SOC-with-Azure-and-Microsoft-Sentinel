@@ -1,13 +1,10 @@
 # Personal Security Operations Center (SOC) with Azure and Microsoft Sentinel
 
 ## Objective
-[Brief Objective - Remove this afterwards]
 To develop a cloud-based Security Operations Center (SOC) using Azure Virtual Machines and Microsoft Sentinel to simulate real-world security monitoring and threat detection processes. This project aims to demonstrate the configuration of an SIEM system, focusing on monitoring Remote Desktop Protocol (RDP) access, creating detection rules, and generating alerts for potential security threats.
 
 
 ### Skills Learned
-[Bullet Points - Remove this afterwards]
-
 - Configuring cloud-based virtual machines (Azure VM)
 - Setting up and managing a Security Information and Event Management (SIEM) system with Microsoft Sentinel
 - Monitoring network traffic and RDP access for security incidents
@@ -15,8 +12,6 @@ To develop a cloud-based Security Operations Center (SOC) using Azure Virtual Ma
 - Working with Log Analytics Workspace for centralized data ingestion and monitoring
 
 ### Tools Used
-[Bullet Points - Remove this afterwards]
-
 - **Azure** (Virtual Machines, Log Analytics Workspace)
 - **Microsoft Sentinel** (SIEM system)
 - **RDP** (Remote Desktop Protocol)
