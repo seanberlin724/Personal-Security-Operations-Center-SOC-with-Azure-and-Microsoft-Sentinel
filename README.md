@@ -20,15 +20,15 @@ To develop a cloud-based Security Operations Center (SOC) using Azure Virtual Ma
 
 ## Steps
 ### 1. Set up Azure Virtual Machine
-[Insert Screenshot]
 <img src="Images/1.png">
+*Ref 1: Azure Virtual Machine Setup Screenshot*
 - Created a Windows-based Virtual Machine in Azure, using the free trial credits for deployment.
 - Exposed RDP (Remote Desktop Protocol) access to simulate potential attacks and generate security events for monitoring.
 
 *Ref 1: Azure Virtual Machine Setup Screenshot*
 
 ### 2. Configure Microsoft Sentinel
-[Insert Screenshot]
+img src="Images/2.png">
 - Deployed Microsoft Sentinel on Azure and linked it to the Log Analytics Workspace to begin ingesting security event logs from the VM.
 - Connected the VM’s security logs to Sentinel using Data Connectors, enabling log collection for analysis.
 
