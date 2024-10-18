@@ -49,6 +49,7 @@ To develop a cloud-based Security Operations Center (SOC) using Azure Virtual Ma
 [Insert Screenshot]
 - Demonstrated real-time incident generation in Microsoft Sentinel by attempting RDP logins. The successful attempts were flagged and alerted by the custom detection rules set up in the previous step.
 - Incidents were generated for both successful logins via RDP, simulating a real-world security scenario (i.e. brute force attack).
+<img src="Images/4.png">
 
 *Ref 4: Incident Generation Screenshot*
 
@@ -56,6 +57,11 @@ To develop a cloud-based Security Operations Center (SOC) using Azure Virtual Ma
 [Insert Screenshot]
 - Linked the Azure Virtual Machine to the Log Analytics Workspace to centralize data collection.
 - Optimized data ingestion and monitoring workflows, ensuring that security events from the VM were available for analysis in real-time.
+<img src="Images/5a.png">
+
+*Ref 5: Log Analytics Workspace Configuration Screenshot*
+
+<img src="Images/5b.png">
 
 *Ref 5: Log Analytics Workspace Configuration Screenshot*
 
