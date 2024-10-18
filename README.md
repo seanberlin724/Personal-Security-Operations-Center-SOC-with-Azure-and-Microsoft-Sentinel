@@ -1,4 +1,4 @@
-# PROJECTNAME
+# Personal Security Operations Center (SOC) with Azure and Microsoft Sentinel
 
 ## Objective
 [Brief Objective - Remove this afterwards]
