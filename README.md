@@ -2,24 +2,63 @@
 
 ## Objective
 [Brief Objective - Remove this afterwards]
-
+To develop a cloud-based Security Operations Center (SOC) using Azure Virtual Machines and Microsoft Sentinel to simulate real-world security monitoring and threat detection processes. This project aims to demonstrate the configuration of an SIEM system, focusing on monitoring Remote Desktop Protocol (RDP) access, creating detection rules, and generating alerts for potential security threats.
 
 
 ### Skills Learned
 [Bullet Points - Remove this afterwards]
 
-- 
+- Configuring cloud-based virtual machines (Azure VM)
+- Setting up and managing a Security Information and Event Management (SIEM) system with Microsoft Sentinel
+- Monitoring network traffic and RDP access for security incidents
+- Creating and fine-tuning detection rules for real-time threat alerting
+- Working with Log Analytics Workspace for centralized data ingestion and monitoring
 
 ### Tools Used
 [Bullet Points - Remove this afterwards]
 
-- 
+- **Azure** (Virtual Machines, Log Analytics Workspace)
+- **Microsoft Sentinel** (SIEM system)
+- **RDP** (Remote Desktop Protocol)
+- **Custom detection rules** in Microsoft Sentinel
+- **Log Analytics** for data ingestion and analysis
 
 ## Steps
-drag & drop screenshots here or use imgur and reference them using imgsrc
+### 1. Set up Azure Virtual Machine
+[Insert Screenshot]
+- Created a Windows-based Virtual Machine in Azure, using the free trial credits for deployment.
+- Exposed RDP (Remote Desktop Protocol) access to simulate potential attacks and generate security events for monitoring.
 
-Every screenshot should have some text explaining what the screenshot is about.
+*Ref 1: Azure Virtual Machine Setup Screenshot*
 
-Example below.
+### 2. Configure Microsoft Sentinel
+[Insert Screenshot]
+- Deployed Microsoft Sentinel on Azure and linked it to the Log Analytics Workspace to begin ingesting security event logs from the VM.
+- Connected the VM’s security logs to Sentinel using Data Connectors, enabling log collection for analysis.
 
-*Ref 1: Network Diagram*
+*Ref 2: Microsoft Sentinel Dashboard Screenshot*
+
+### 3. Create Custom Detection Rules for RDP Sign-ins
+[Insert Screenshot]
+- Configured custom detection rules in Microsoft Sentinel to monitor and alert on both successful and failed RDP sign-ins.
+- The rules triggered real-time alerts, allowing for immediate detection of suspicious login attempts.
+
+*Ref 3: Custom Detection Rule Setup Screenshot*
+
+### 4. Real-Time Alerts and Incident Generation
+[Insert Screenshot]
+- Demonstrated real-time incident generation in Microsoft Sentinel by attempting RDP logins. These attempts were flagged and alerted by the custom detection rules set up in the previous step.
+- Incidents were generated for both failed and successful logins, simulating a real-world security scenario.
+
+*Ref 4: Incident Generation Screenshot*
+
+### 5. Log Analytics Workspace Configuration
+[Insert Screenshot]
+- Linked the Azure Virtual Machine to the Log Analytics Workspace to centralize data collection.
+- Optimized data ingestion and monitoring workflows, ensuring that security events from the VM were available for analysis in real-time.
+
+*Ref 5: Log Analytics Workspace Configuration Screenshot*
+
+### Future Enhancements
+- Integrate threat intelligence indicators through API calls for more comprehensive security monitoring.
+- Implement automation for responding to specific alerts, reducing the need for manual intervention.
