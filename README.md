@@ -35,15 +35,15 @@ To develop a cloud-based Security Operations Center (SOC) using Azure Virtual Ma
 
 ### 3. Create Custom Detection Rules for RDP Sign-ins
 [Insert Screenshot]
-- Configured custom detection rules in Microsoft Sentinel to monitor and alert on both successful and failed RDP sign-ins.
+- Configured custom detection rules in Microsoft Sentinel to monitor and alert on successful RDP sign-ins.
 - The rules triggered real-time alerts, allowing for immediate detection of suspicious login attempts.
 
 *Ref 3: Custom Detection Rule Setup Screenshot*
 
 ### 4. Real-Time Alerts and Incident Generation
 [Insert Screenshot]
-- Demonstrated real-time incident generation in Microsoft Sentinel by attempting RDP logins. These attempts were flagged and alerted by the custom detection rules set up in the previous step.
-- Incidents were generated for both failed and successful logins, simulating a real-world security scenario.
+- Demonstrated real-time incident generation in Microsoft Sentinel by attempting RDP logins. The successful attempts were flagged and alerted by the custom detection rules set up in the previous step.
+- Incidents were generated for both successful logins via RDP, simulating a real-world security scenario (i.e. brute force attack).
 
 *Ref 4: Incident Generation Screenshot*
 
