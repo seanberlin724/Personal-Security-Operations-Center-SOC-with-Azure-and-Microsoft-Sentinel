@@ -20,26 +20,30 @@ To develop a cloud-based Security Operations Center (SOC) using Azure Virtual Ma
 
 ## Steps
 ### 1. Set up Azure Virtual Machine
-<img src="Images/1.png">
-*Ref 1: Azure Virtual Machine Setup Screenshot*
 - Created a Windows-based Virtual Machine in Azure, using the free trial credits for deployment.
 - Exposed RDP (Remote Desktop Protocol) access to simulate potential attacks and generate security events for monitoring.
+<img src="Images/1.png">
 
-*Ref 1: Azure Virtual Machine Setup Screenshot*
+*Ref 1: Azure Virtual Machine Overview Screenshot*
+
 
 ### 2. Configure Microsoft Sentinel
-img src="Images/2.png">
 - Deployed Microsoft Sentinel on Azure and linked it to the Log Analytics Workspace to begin ingesting security event logs from the VM.
 - Connected the VM’s security logs to Sentinel using Data Connectors, enabling log collection for analysis.
+<img src="Images/2.png">
 
 *Ref 2: Microsoft Sentinel Dashboard Screenshot*
 
 ### 3. Create Custom Detection Rules for RDP Sign-ins
-[Insert Screenshot]
 - Configured custom detection rules in Microsoft Sentinel to monitor and alert on successful RDP sign-ins.
 - The rules triggered real-time alerts, allowing for immediate detection of suspicious login attempts.
+<img src="Images/3a.png">
 
-*Ref 3: Custom Detection Rule Setup Screenshot*
+*Ref 3: Custom Detection Rule Setup Screenshot 1/2*
+
+<img src="Images/3b.png">
+
+*Ref 3: Custom Detection Rule Setup Screenshot 2/2*
 
 ### 4. Real-Time Alerts and Incident Generation
 [Insert Screenshot]
