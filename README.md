@@ -61,8 +61,79 @@ To develop a cloud-based Security Operations Center (SOC) using Azure Virtual Ma
 
 <img src="Images/5b.png">
 
-*Ref 5: Incident Details Screenshot*
+*Ref 6: Incident Details Screenshot*
 
-### Future Enhancements
-- Integrate threat intelligence indicators through API calls for more comprehensive security monitoring.
-- Implement automation for responding to specific alerts, reducing the need for manual intervention.
+### 6. Integrate threat intelligence indicators through API calls for more comprehensive security monitoring
+- The next series of events will entail setting up a threat intelligence feed and sending it into the SIEM utilizing Microsoft's prepackaged data connectors.
+- To start, I installed the MISP2Sentinel Data Connector from the Content Hub.
+- MISP is an open source threat intelligence platform. They utilize various threat indicators pulled from various partnered companies. The default (free) feeds are described in a JSON format. This will come into play when importing the data.
+- 
+<img src="Images/Install MISP2Sentinel Data Connector.png">
+
+*Ref 7: Install MISP2Sentinel Data Connector*
+
+- To continue this process, I created a new VM to host a Docker container to import the data from MISP.
+- Below is the overview of the VM for documentation purposes.
+
+<img src="Images/VM2 Overviewr.png">
+
+*Ref 8: VM2 Overview*
+
+
+- I then set up SSH using Azure CLI to connect to the VM.
+
+<img src="Images/Connect to VM2 through SSH.png">
+
+*Ref 9: Connect to VM2 through SSH*
+
+- I then installed Docker using the following commands from the Docker website
+
+<img src="Images/Docker Install Commands.png">
+
+*Ref 10: Docker Install Commands*
+
+- The following screenshot verifies that the Docker Engine installation is successful by running the hello-world image.
+<img src="Images/Verify Docker Installation.png">
+
+*Ref 11: Verify Docker Installation*
+
+
+
+- Next, I cloned the MISP Docker Portfolio using the command "$ git clone https://github.com/MISP/misp-docker"
+- I then copied the template.env to .env and modified .env to set the value of the "BASE_URL" variable to the IP of the VM.
+- I then performed the listed set of commands below from the GitHub portfolio
+
+<img src="Images/Docker Run Commands.png">
+
+*Ref 12: Docker Run Commands*
+
+
+
+- Under the Networking section of the VM (Ubuntu VM), I opened up port 443 to allow the connection to be established from anywhere.
+  
+<img src="Images/Open Port 443 on VM2.png">
+
+*Ref 12: Open Port 443 on VM2*
+
+
+Next, I logged into the MISP portal via a normal web browser on my host machine. Before any other steps, I first changed the default password used to login.
+The next step was to enable the feeds on the website.
+I started by coping the JSON file from the MISP GitHub of "https://github.com/MISP/MISP/blob/2.4/app/files/feed-metadata/defaults.json"
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### 7.Implement automation for responding to specific alerts, reducing the need for manual intervention.
