@@ -113,21 +113,47 @@ To develop a cloud-based Security Operations Center (SOC) using Azure Virtual Ma
   
 <img src="Images/Open Port 443 on VM2.png">
 
-*Ref 12: Open Port 443 on VM2*
+*Ref 13: Open Port 443 on VM2*
 
 
-Next, I logged into the MISP portal via a normal web browser on my host machine. Before any other steps, I first changed the default password used to login.
-The next step was to enable the feeds on the website.
-I started by coping the JSON file from the MISP GitHub of "https://github.com/MISP/MISP/blob/2.4/app/files/feed-metadata/defaults.json"
+- Next, I logged into the MISP portal via a normal web browser on my host machine. Before any other steps, I first changed the default password used to login.
+- The next step was to enable the feeds on the website.
+- I started by copying the JSON file from the MISP GitHub of "https://github.com/MISP/MISP/blob/2.4/app/files/feed-metadata/defaults.json"
+- I then went to my personal MISP portal and enabled the threat indicators by pasting the previously copied JSON content into the Feeds section and selecting enabled on all the pages available.
+- This enables the ability to select "fetch and store all feed data".
 
-  
+<img src="Images/Paste JSON into Import Feeds.png">
+
+*Ref 14: Paste JSON into Import Feeds*
 
 
 
+- Next, I set up a data connector into the Microsoft Sentinel to now be pulling these threat indicators in.
+- To start, I installed MISP into Microsoft Sentinel by using the Upload Indicators API.
+- I registered a new application the Azure tenant to service the MISP to Microsoft Sentinel connection.
+
+<img src="Images/Register MISP to Sentinel.png">
+
+*Ref 14: Register MISP to Sentinel*
 
 
 
+I then created a new client secret for MISP.
+Next, I added the Microsoft Sentinel contributor role to the Azure app that was just created. This allows the app to access the workspace.
+To do this, I navigated to the Log Analytics Workspace where the Microsoft Sentinel instance was created and granted a role that allows the app to access Microsoft Sentinel.
 
+<img src="Images/Grant Role to App.png">
+
+*Ref 15: Grant Role to App*
+
+
+
+I then created a Key Vault to store the MISP API key.
+Then, to get the MISP API Key, which is needed to allow the function app to connect to the MISP instance and allow it to pull the indicators to send it over to Microsoft Sentinel, I navigated to Administration in the MISP web portal in List Auth Keys. I then added an authentication key and copied it down as the entire ID will not be able to be retrieved beyond this point.
+
+<img src="Images/Authentication Key Index.png">
+
+*Ref 15: Authentication Key Index*
 
 
 
