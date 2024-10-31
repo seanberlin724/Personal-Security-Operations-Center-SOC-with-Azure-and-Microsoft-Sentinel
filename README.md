@@ -75,7 +75,7 @@ To develop a cloud-based Security Operations Center (SOC) using Azure Virtual Ma
 - To continue this process, I created a new VM to host a Docker container to import the data from MISP.
 - Below is the overview of the VM for documentation purposes.
 
-<img src="Images/VM2 Overviewr.png">
+<img src="Images/VM2 Overview.png">
 
 *Ref 8: VM2 Overview*
 
