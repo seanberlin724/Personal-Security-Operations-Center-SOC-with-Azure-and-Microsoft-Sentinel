@@ -1,4 +1,4 @@
-# Personal Security Operations Center (SOC) with Azure and Microsoft Sentinel
+# Cloud-Based Security Operations Center (SOC) with Azure and Microsoft Sentinel
 
 ## Objective
 To develop and enhance a cloud-based Security Operations Center (SOC) using Azure Virtual Machines, Microsoft Sentinel, and integrated threat intelligence tools, simulating real-world security monitoring and advanced threat detection processes. This project includes configuring a SIEM system, monitoring RDP access, implementing custom detection rules, integrating external threat intelligence feeds (MISP), and exploring automation to create alerts for high-confidence threats.
