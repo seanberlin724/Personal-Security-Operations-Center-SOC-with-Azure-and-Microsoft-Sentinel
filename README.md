@@ -157,12 +157,58 @@ Then, to get the MISP API Key, which is needed to allow the function app to conn
 
 
 Next, I created a function app rather than needing to create a function on the MISP instance itself on the Ubuntu server. In other words, the function app will be used to pull from MISP directly into Microsoft Sentinel. 
+Note: The function app uses "App Service" as the hosting option and is not part of the Microsoft Azure Free Subscription. For example, I upgraded to the Basic Subscription 
 
 <img src="Images/Set Up Function App.png">
 
 *Ref 17: Set Up Function App*
 
 
+Next, I created a function, but I created it on my desktop rather than utilizing the Azure portal. I downloaded and opened the following GitHub repository into Visual Studio Code: "https://github.com/cudeso/misp2sentinel". Note: Be sure to have the Python and Python Debugger extensions installed.
+I then signed into my Azure account using VS Code.
+The two files that I changed were "config.py" and the "_init_.py".
+The reasoning for the modifications is because the instructions (in the function app) do not match the python code.
+
+Below is the modification made to the "_init_.py". This file is the function that runs to pull things from the MISP instance using the API key and then sending it into the Microsoft Sentinel data connector. The deletion of the following lines of code prevents an error as this is a Single-tenant and not a Multi-tenant. To be clear, delete the code from line 105 to 110.
+
+<img src="Images/_init_py Change.png">
+
+*Ref 18: _init_py Change*
+
+Below is the modification made to the "config.py" file on line 40.
+
+<img src="Images/config Change.png">
+
+*Ref 19: config Change*
+
+
+
+I then saved the changes and deployed the function app
+
+<img src="Images/Successful Function App Deployment from VS Code.png">
+
+*Ref 20: Successful Function App Deployment from VS Code*
+
+
+
+The next step involved adjusting the environmental variables and setting everything that is going to be called from that function.
+The reason for this is that in the "config.py" file, the ms_auth function has API settings that need to be set as highlighted below.
+
+<img src="Images/config Environmental Variables.png">
+
+*Ref 20: config Environmental Variables*
+
+
+I then added the below Environmental Variables in the Function App as well as additional ones such as "AzureFunctionsJobHost_functionTimeout" and "timeTriggerSchedule".
+These were done due to instructions given on the GitHub portfolio.
+
+<img src="Images/Environmental Variables 1 of 2.png.png">
+
+*Ref 21: config Environmental Variables 1 of 2.png*
+
+<img src="Images/Environmental Variables 2 of 2.png.png">
+
+*Ref 22: config Environmental Variables 2 of 2.png*
 
 
 
