@@ -250,7 +250,3 @@ In this case, I created a security event that will be triggered when it encounte
 
 *Ref 26:  Threat Intelligence Indicator Query.png*
 
-
-
-
-### 7.FUTURE ADDITIONS:  Implement automation for responding to specific alerts, reducing the need for manual intervention.
