@@ -241,7 +241,7 @@ For example, if you wanted to look for a Threat Intelligence Indicator with a on
 Additionally, network IP addresses can be used to identify security events containing an IP address from a predetermined list. 
 In this case, I created a security event that will be triggered when it encounters a network IP with a 100 ConfidenceScore. This query can then be put into an Analytics Rule to create custom detections.
 
-<img src="Images/Threat Intelligence Indicator Query.png.png">
+<img src="Images/Threat Intelligence Indicator Query.png">
 
 *Ref 26:  Threat Intelligence Indicator Query.png*
 
