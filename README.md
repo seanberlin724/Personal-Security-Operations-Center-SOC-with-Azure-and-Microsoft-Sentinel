@@ -153,10 +153,14 @@ Then, to get the MISP API Key, which is needed to allow the function app to conn
 
 <img src="Images/Authentication Key Index.png">
 
-*Ref 15: Authentication Key Index*
+*Ref 16: Authentication Key Index*
 
 
+Next, I created a function app rather than needing to create a function on the MISP instance itself on the Ubuntu server. In other words, the function app will be used to pull from MISP directly into Microsoft Sentinel. 
 
+<img src="Images/Set Up Function App.png">
+
+*Ref 17: Set Up Function App*
 
 
 
