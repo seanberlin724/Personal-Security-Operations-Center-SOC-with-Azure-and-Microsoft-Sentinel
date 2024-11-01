@@ -1,22 +1,27 @@
 # Personal Security Operations Center (SOC) with Azure and Microsoft Sentinel
 
 ## Objective
-To develop a cloud-based Security Operations Center (SOC) using Azure Virtual Machines and Microsoft Sentinel to simulate real-world security monitoring and threat detection processes. This project aims to demonstrate the configuration of an SIEM system, focusing on monitoring Remote Desktop Protocol (RDP) access, creating detection rules, and generating alerts for potential security threats.
+To develop and enhance a cloud-based Security Operations Center (SOC) using Azure Virtual Machines, Microsoft Sentinel, and integrated threat intelligence tools, simulating real-world security monitoring and advanced threat detection processes. This project includes configuring a SIEM system, monitoring RDP access, implementing custom detection rules, integrating external threat intelligence feeds (MISP), and exploring automation to create alerts for high-confidence threats.
 
 
 ### Skills Learned
-- Configuring cloud-based virtual machines (Azure VM)
-- Setting up and managing a Security Information and Event Management (SIEM) system with Microsoft Sentinel
-- Monitoring network traffic and RDP access for security incidents
-- Creating and fine-tuning detection rules for real-time threat alerting
-- Working with Log Analytics Workspace for centralized data ingestion and monitoring
+- Configuring and managing cloud-based virtual machines (Azure VM)
+- Setting up and operating a SIEM system with Microsoft Sentinel for proactive threat monitoring
+- Integrating threat intelligence feeds with Microsoft Sentinel via API (MISP2Sentinel)
+- Developing custom detection rules and queries for specific threat indicators
+- Deploying Docker containers and managing APIs to automate threat ingestion
+- Using Log Analytics Workspace for centralized data ingestion and in-depth threat analysis
+- Configuring automation for real-time responses to security alerts
 
 ### Tools Used
-- **Azure** (Virtual Machines, Log Analytics Workspace)
-- **Microsoft Sentinel** (SIEM system)
-- **RDP** (Remote Desktop Protocol)
-- **Custom detection rules** in Microsoft Sentinel
-- **Log Analytics** for data ingestion and analysis
+- **Azure** (Virtual Machines, Log Analytics Workspace, Azure CLI, Key Vault)
+- **Microsoft Sentinel** (SIEM system, Analytics, Incidents, Content Hub)
+- **RDP** (Remote Desktop Protocol) for access simulation and security testing
+- **MISP2Sentinel Data Connector** for threat intelligence integration
+- **Docker** for MISP deployment on Azure VM
+- **Log Analytics** for centralized data collection and analysis
+- **Azure Function Apps** for automated data processing and alert response
+- **Visual Studio Code** for code modifications and deployment of custom applications
 
 ## Steps
 ### 1. Set up Azure Virtual Machine
