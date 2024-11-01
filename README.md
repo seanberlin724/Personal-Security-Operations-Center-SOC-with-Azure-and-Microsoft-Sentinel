@@ -202,14 +202,50 @@ The reason for this is that in the "config.py" file, the ms_auth function has AP
 I then added the below Environmental Variables in the Function App as well as additional ones such as "AzureFunctionsJobHost_functionTimeout" and "timeTriggerSchedule".
 These were done due to instructions given on the GitHub portfolio.
 
-<img src="Images/Environmental Variables 1 of 2.png.png">
+<img src="Images/Environmental Variables 1 of 2.png">
 
-*Ref 21: config Environmental Variables 1 of 2.png*
+*Ref 21: Environmental Variables 1 of 2.png*
 
-<img src="Images/Environmental Variables 2 of 2.png.png">
+<img src="Images/Environmental Variables 2 of 2.png">
 
-*Ref 22: config Environmental Variables 2 of 2.png*
+*Ref 22:  Environmental Variables 2 of 2*
+
+
+Next, I tested the Function App live to make sure it is properly running rather than waiting for the Azure results as they are frequently delayed. 
+To do this, I viewed the Function App Logs to check for any errors. Fortunately, no errors were found as the proper environmental variables were being pulled.
+
+<img src="Images/Function App Test Logs.png">
+
+*Ref 23:  Function App Test Logs*
+
+The MISP2Sentinel data connector in Microsoft Sentinel should now have the Status of Connected if everything is running properly.
+
+<img src="Images/MISP2Sentinel Connected.png">
+
+*Ref 24:  MISP2Sentinel Connected*
+
+Threat Intelligence should now be correctly working and be viewable in Microsoft Sentinel as well.
+
+<img src="Images/Microsoft Sentinel Threat Intelligence.png">
+
+*Ref 25:  Microsoft Sentinel Threat Intelligence*
+
+
+Furthermore, Threat Intelligence Indicators as a table that can be used to create alerts
+
+<img src="Images/Threat Intelligence Indicator Table.png">
+
+*Ref 25:  Threat Intelligence Indicator Table*
+
+For example, if you wanted to look for a Threat Intelligence Indicator with a one hundred percent confidence rate (likely to be a real threat). 
+Additionally, network IP addresses can be used to identify security events containing an IP address from a predetermined list. 
+In this case, I created a security event that will be triggered when it encounters a network IP with a 100 ConfidenceScore. This query can then be put into an Analytics Rule to create custom detections.
+
+<img src="Images/Threat Intelligence Indicator Query.png.png">
+
+*Ref 26:  Threat Intelligence Indicator Query.png*
 
 
 
-### 7.Implement automation for responding to specific alerts, reducing the need for manual intervention.
+
+### 7.FUTURE ADDITIONS:  Implement automation for responding to specific alerts, reducing the need for manual intervention.
